@@ -1,0 +1,116 @@
+@charset "ISO-8859-1";
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+#body-login {
+	background-color: #00909C;
+}
+
+#body-flex-login {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+#container-login {
+	display: flex;
+	width: 820px;
+	height: 610px;
+	background-color: white;
+}
+
+#container-login-left {
+	width: 384px;
+	height: 610px;
+	background-image: url("../images/meo.jpg");
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header-left {
+	margin-top: 32px;
+	text-align: center;
+}
+
+#welcome {
+	font-size: 48px;
+}
+
+#after-welcome {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+#bottom-left span {
+	margin-left: 8px;
+}
+
+#bottom-left {
+	margin-bottom: 34px;
+	font-size: 15px;
+	margin-left: 16px;
+}
+
+#container-login-right {
+	padding: 0 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+}
+
+#header-right {
+	font-size: 20px;
+	color: #b7b7b7;
+
+}
+
+#logo {
+	align-self: flex-end;
+	margin-bottom: 16px;
+}
+
+.input1 {
+	background: url(../images/mail.png) no-repeat scroll 14px 9px;
+	height: 38px;
+	border: 0px;
+	background-color: #D8D8D8;
+	width: 88%;
+	margin-top: 8px;
+	padding-left: 42px;
+	font-size: 14px;
+}
+
+.input2 {
+	background: url(../images/lock.png) no-repeat scroll 13px 9px;
+	height: 38px;
+	border: 0px;
+	background-color: #D8D8D8;
+	width: 88%;
+	margin-top: 8px;
+	padding-left: 42px;
+	font-size: 14px;
+}
+
+.button {
+	height: 38px;
+	border: 0px;
+	background-color: #00909C;
+	width: 100%;
+	margin-top: 24px;
+	font-size: 14px;
+	color: white;
+}
+
+.actived {
+	color: #Da7c79;
+}

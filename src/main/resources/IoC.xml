@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- <bean id="nhanvien" class="com.vuavent.springO.entity.NhanVien" init-method="start" 
+		destroy-method="destroy" > <property name="name" value="Minh Vu"></property> 
+		</bean> -->
+<!-- 	<bean id="nhanvien1" factory-bean="nhanvien"
+		factory-method="createNV"></bean>
+
+	<bean id="nhanvien" class="com.vuavent.springO.entity.NhanVien" scope="prototype">
+		<constructor-arg value="Minh Dzu"/> <constructor-arg value="20"/> 
+			<constructor-arg value="nam phuoc"/>
+		<constructor-arg ref="giamdoc" />
+		<property name="list">
+			<list>
+				<value>hi</value> nếu tham số là String
+				<ref bean="giamdoc"></ref> 	truyền vào list giá trị là 1 obj
+			</list>
+		</property>
+		
+		<property name="map">
+			<map>
+				<entry key="key1" value="abcc"></entry>
+				<entry key="key2" value-ref="giamdoc"></entry>
+			</map>
+		</property>
+		
+		<property name="properties">
+			<props>
+				<prop key="jdbc">mySQL</prop>
+				<prop key="user">root</prop>
+				<prop key="password">12345</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="giamdoc" class="com.vuavent.springO.entity.GiamDoc">
+		<constructor-arg value="giamdoc" />
+		<constructor-arg value="Vuu" />
+		<constructor-arg value="90" />
+	</bean>
+	 -->
+<!-- 	 
+	 inner bean
+	 <bean id="nhanvien" class="com.vuavent.springO.entity.NhanVien">
+	 	<property name="gdoc">
+	 		<bean class="com.vuavent.springO.entity.GiamDoc">
+	 			<property name="chucvu" value="osin"></property>
+	 		</bean>
+	 	</property> 
+	 </bean>
+ -->	
+ <!-- autowire: 
+ 		byname: tìm tới tên bean giống tên biến của class 
+ 		-->
+ <bean id="nhanvien" class="com.vuavent.springO.entity.NhanVien" autowire="byName"></bean> 
+ <bean id="gdoc" class="com.vuavent.springO.entity.GiamDoc"></bean>
+ 
+ <bean id="customLoader" class="com.vuavent.springO.controller.CustomLoader" autowire="byType"></bean>
+</beans>
